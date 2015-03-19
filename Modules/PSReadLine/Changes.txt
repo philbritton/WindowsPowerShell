@@ -1,3 +1,100 @@
+### Version 1.0.0.12
+
+New features:
+* Multi-line editing is now practical.  Home/End go to the start/end of the current line or
+  start/end of the input in a reasonable way.  Up/Down arrows will move across lines if the
+  input has multiple lines and you are not in the middle of recalling history.
+
+Bug fixes:
+* Color the prompt character if there is an error for any non-alphanumeric character
+* Fix an issue related to undo (which was commonly hit via Escape) and using history search
+* Fix a bug where PowerShell events are not written to the console until PSReadline returns
+* Fixed so PowerTab now works with PSReadline
+* Highlight from history search is cleared before accepting a line now.
+* Fixed MenuComplete so it clears the menu (which only happened on some systems)
+
+New functions:
+* NextLine
+* PreviousLine
+    - These functions are added for completeness, neither is particularly useful as the usual
+      bindings for UpArrow/DownArrow are smart enough to recall history or change lines
+      depending on the context.
+
+New key bindings:
+* F8/Shift+F8 bound to HistorySearchBackward/HistorySearchForward in Windows mode
+
+### Version 1.0.0.11
+
+Bug fixes:
+* Fixed MenuComplete to actually work
+
+### Version 1.0.0.10
+
+New features:
+* Added binding Ctrl+SpaceBar to MenuComplete in Windows and Emacs modes
+  - If you want to old behavior of Ctrl+Spacebar, bind it to PossibleCompletions
+* Added binding Alt+. (YankLastArg) to Windows mode
+* Added diagnostics when an exception occurs to help reporting bugs
+
+Bug fixes:
+* SaveHistoryPath option fixed
+* Fix ShowKeyBindings to not write blank lines
+* Fixed bug with undo
+
+### Version 1.0.0.9
+
+New features:
+* MenuComplete - like an interactive show completion
+* Automatically save history
+    - at process exit
+    - incrementally and shared across sessions
+    - don't save
+  See parameters HistorySaveStyle and HistorySavePath to Set-PSReadlineOption
+* Added sample custom binding for quickly changing directories in SamplePSReadlineProfile.ps1
+
+Bug fixes:
+* Items loaded from history work with RevertLine
+* Recalling current line after up arrow works again
+
+### Version 1.0.0.8
+
+New features:
+* SamplePSReadlineProfile.ps1 added with examples of custom key bindings
+* Word movement takes DigitArgument
+* HistoryNoDuplicates now works a little differently
+    - Dupicates are saved (it was a dubious memory optimization anyway)
+    - Recall will recall the most recently executed item instead of the first
+* When at the last word, NextWord/ForwardWord now move to the end of line instead
+  of the last character of the word.
+* HistorySearchBackward/HistorySearchForward changes behavior slightly:
+    - use emphasis like InteractiveHistorySearch
+    - cursor always moves to end like PreviousHistory/NextHistory
+* New api GetSelectionState to get the current selection (if any).
+* New functions:
+    - SelectBackwardsLine
+    - SelectLine
+    - SelectAll
+    - CopyOrCancelLine
+* New key bindings in Windows mode:
+    - Alt+0 through Alt+9 and Alt+-: DigitArgument
+    - Ctrl+R/Ctrl+S for interactive history search
+
+Bug fixes:
+* Backspace after a failed interactive history search (Ctrl+R) caused searching
+  to fail if you typed anything other than backspace.
+
+### Version 1.0.0.7
+
+New features:
+* CaptureScreen - copies selected portion of screen to clipboard in text and rtf
+* InvokePrompt - re-evaluate the prompt while preserving the current input
+* New functions to scroll the screen w/o using the mouse:
+    - ScrollScreenUp
+    - ScrollScreenDown
+    - ScrollScreenTop
+    - ScrollScreenToCursor
+* Many small bug fixes
+
 ### Version 1.0.0.6
 
 New features:

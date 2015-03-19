@@ -70,7 +70,7 @@ Set-Bookmark dev C:\Development
 # Load Posh-GitHub
 . 'C:\Users\pbritton\SkyDrive\Documents\WindowsPowerShell\Modules\Posh-GitHub\Posh-GitHub-Profile.ps1'
 # Load posh-git example profile
-#. 'C:\Users\pbritton\SkyDrive\Documents\WindowsPowerShell\Modules\posh-git\profile.ps1'
+. 'C:\Users\pbritton\SkyDrive\Documents\WindowsPowerShell\Modules\posh-git\profile.ps1'
 New-PSdrive -name scripts -PSprovider filesystem -root C:\bin\PowerShellScripts
 # Load posh-git example profile
 #. 'C:\Users\pbritton\SkyDrive\Documents\WindowsPowerShell\Modules\posh-git\profile.example.ps1'

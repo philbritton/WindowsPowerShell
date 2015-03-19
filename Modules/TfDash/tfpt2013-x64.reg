@@ -1,0 +1,13 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PowerShell\1\PowerShellSnapIns\Microsoft.TeamFoundation.PowerShell]
+"PowerShellVersion"="2.0"
+"Vendor"="Microsoft Corporation"
+"Description"="This is a PowerShell snap-in that includes the Team Foundation Server cmdlets."
+"VendorIndirect"="Microsoft.TeamFoundation.PowerShell,Microsoft"
+"DescriptionIndirect"="Microsoft.TeamFoundation.PowerShell,This is a PowerShell snap-in that includes the Team Foundation Server cmdlets."
+"Version"="10.0.0.0"
+"ApplicationBase"="C:\\Program Files (x86)\\Microsoft Team Foundation Server 2010 Power Tools"
+"AssemblyName"="Microsoft.TeamFoundation.PowerTools.PowerShell, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+"ModuleName"="C:\\Program Files (x86)\\Microsoft Team Foundation Server 2010 Power Tools\\Microsoft.TeamFoundation.PowerTools.PowerShell.dll"
+"CustomPSSnapInType"="Microsoft.TeamFoundation.PowerTools.PowerShell.TFPSSnapIn"
