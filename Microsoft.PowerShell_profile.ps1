@@ -60,6 +60,8 @@ $env:path += ";" + (Get-Item "Env:ProgramFiles(x86)").Value + "\Git\bin"
 Import-Module 'C:\Users\pbritton\SkyDrive\Documents\WindowsPowerShell\Modules\bookmarks\bookmarks.psm1'
 import-module PsGet
 import-module posh-git
+import-module PowerLS
+import-module TabExpansion++
 #Get-Module -ListAvailable | Import-Module
 
 Set-Alias g Invoke-Bookmark
