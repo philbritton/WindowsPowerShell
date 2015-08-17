@@ -63,12 +63,10 @@ import-module posh-git
 import-module PowerLS
 import-module TabExpansion++
 #Get-Module -ListAvailable | Import-Module
-
 Set-Alias g Invoke-Bookmark
 Set-Bookmark pspath C:\Users\pbritton\SkyDrive\Documents\WindowsPowerShell\
 Set-Bookmark ~ C:\Users\pbritton
 Set-Bookmark dev C:\Development
-
 # Load Posh-GitHub
 . 'C:\Users\pbritton\SkyDrive\Documents\WindowsPowerShell\Modules\Posh-GitHub\Posh-GitHub-Profile.ps1'
 # Load posh-git example profile
@@ -81,6 +79,6 @@ New-PSdrive -name scripts -PSprovider filesystem -root C:\bin\PowerShellScripts
 function subl { &"${Env:ProgramFiles}\Sublime Text 3\sublime_text.exe" $args }
 Rename-Item Function:\Prompt PoshGitPrompt -Force
 if(Test-Path Function:\Prompt) {Rename-Item Function:\Prompt PrePoshGitPrompt -Force}
-
-
 function Prompt() {if(Test-Path Function:\PrePoshGitPrompt){++$global:poshScope; New-Item function:\script:Write-host -value "param([object] `$object, `$backgroundColor, `$foregroundColor, [switch] `$nonewline) " -Force | Out-Null;$private:p = PrePoshGitPrompt; if(--$global:poshScope -eq 0) {Remove-Item function:\Write-Host -Force}}PoshGitPrompt}
+# Load posh-dnvm example profile
+Import-Module posh-dnvm

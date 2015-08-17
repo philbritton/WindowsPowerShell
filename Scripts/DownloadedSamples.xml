@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DownloadedSamples>
+  <ScriptSample Name="How-to-Install-RSAT-on-0b0b04f5" LastUpdated="8/28/2012" Link="https://gallery.technet.microsoft.com/How-to-Install-RSAT-on-0b0b04f5" Rating="5" Raters="5" Downloads="705" Title="How to Install RSAT on Windows 8 RTM" Category="Operating System" SubCategory="Service Packs and Hot Fixes" Author="Prajwal Desai" Summary="As per Microsoft the RSAT tools that was released for Windows 8 Preview works fine only with Windows 8 Preview but not with Windows 8 RTM. Currently Microsoft has not released any RSAT tool for windows 8 RTM, here is a way to install the RSAT on windows 8 RTM.The RSAT tool is ava" IsAllDownloaded="true">
+    <SamplePackages>
+      <SamplePackage LastUpdated="7/2/2015" DownloadLink="https://gallery.technet.microsoft.com/How-to-Install-RSAT-on-0b0b04f5/file/65414/1/The%20RSAT%20for%20windows%208%20RTM.docx" FileName="The RSAT for windows 8 RTM.docx" FileNameWithoutExtension="The RSAT for windows 8 RTM" LocalPath="C:\Users\pbritton\SkyDrive\Documents\WindowsPowerShell\Scripts\How-to-Install-RSAT-on-0b0b04f5\The RSAT for windows 8 RTM" />
+    </SamplePackages>
+  </ScriptSample>
+</DownloadedSamples>
