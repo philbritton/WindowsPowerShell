@@ -91,3 +91,7 @@ if(Test-Path Function:\Prompt) {Rename-Item Function:\Prompt PrePoshGitPrompt -F
 function Prompt() {if(Test-Path Function:\PrePoshGitPrompt){++$global:poshScope; New-Item function:\script:Write-host -value "param([object] `$object, `$backgroundColor, `$foregroundColor, [switch] `$nonewline) " -Force | Out-Null;$private:p = PrePoshGitPrompt; if(--$global:poshScope -eq 0) {Remove-Item function:\Write-Host -Force}}PoshGitPrompt}
 # Load posh-dnvm example profile
 Import-Module posh-dnvm
+
+# Load Jump-Location profile
+Import-Module 'C:\Users\pbritton\SkyDrive\Documents\WindowsPowerShell\Modules\Jump.Location\Jump.Location.psd1'
+
