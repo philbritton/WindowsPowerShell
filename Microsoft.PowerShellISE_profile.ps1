@@ -84,8 +84,6 @@ Set-Bookmark dev C:\Development
 
 New-PSdrive -name scripts -PSprovider filesystem -root C:\bin\PowerShellScripts
 
-Start-Steroids
-
 
 #Script Browser Begin
 #Version: 1.3.2
@@ -96,3 +94,12 @@ $scriptBrowser = $psISE.CurrentPowerShellTab.VerticalAddOnTools.Add('Script Brow
 $scriptAnalyzer = $psISE.CurrentPowerShellTab.VerticalAddOnTools.Add('Script Analyzer', [BestPractices.Views.BestPracticesView], $true)
 $psISE.CurrentPowerShellTab.VisibleVerticalAddOnTools.SelectedAddOnTool = $scriptBrowser
 #Script Browser End
+
+
+# Start AzureAutomationISEAddOn snippet
+$env:PSModulePath = $env:PSModulePath + ";C:\Users\pbritton\Documents\WindowsPowerShell\Modules"
+if($PSIse) {
+        Add-Type -Path C:\Users\pbritton\Documents\WindowsPowerShell\Modules\AzureAutomationAuthoringToolkit\ISEaddon\AutomationISE.dll | Out-Null
+        $PSIse.CurrentPowerShellTab.VerticalAddOnTools.Add('Azure Automation ISE add-on', [AutomationISE.AutomationISEControl], $True) | Out-Null
+}
+# End AzureAutomationISEAddOn snippet
